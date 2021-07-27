@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.kuang.pojo.Address">
+        <property name="address" value="上海"></property>
+    </bean>
+    <bean id="student" class="com.kuang.pojo.Student">
+        <property name="name" value="Iris"/>
+        <property name="address" ref="address"/>
+        <property name="books">
+            <array>
+                <value>Harry Potter</value>
+                <value>Being educated</value>
+                <value>Principles</value>
+            </array>
+        </property>
+        <property name="hobbys">
+            <list>
+                <value>music</value>
+                <value>dance</value>
+                <value>lift weights</value>
+            </list>
+        </property>
+        <property name="games">
+            <set>
+                <value>植物大战僵尸</value>
+                <value>切水果</value>
+            </set>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="idcard" value="123456"></entry>
+                <entry key="driverlicense" value="89007"></entry>
+            </map>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="url">http://www.baidu.com</prop>
+                <prop key="port">8080</prop>
+            </props>
+        </property>
+        <property name="wife">
+            <null/>
+        </property>
+    </bean>
+</beans>
