@@ -7,7 +7,7 @@
     <bean id="mysqlImpl" class="com.kuang.dao.UserMysqlDaoImpl"></bean>
     <bean id="oracleImpl" class="com.kuang.dao.UserOracleImpl"></bean>
 
-    <bean id="userServiceImpl" class="com.kuang.service.UserServiceImpl">
+    <bean id="userServiceImpl" class="com.kuang.solving01.service.UserServiceImpl">
         <property name="userDao" ref="oracleImpl"></property>
     </bean>
 </beans>
